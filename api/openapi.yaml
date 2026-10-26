@@ -1,0 +1,21 @@
+openapi: 3.0.3
+info:
+  title: web-bff
+  version: 1.0.0
+paths:
+  /api/catalog/items/{id}:
+    get:
+      operationId: getCatalogItemHandler
+      responses:
+        "200":
+          description: Product view for frontend buy box.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [id, displayPrice]
+                properties:
+                  id:
+                    type: string
+                  displayPrice:
+                    type: string
